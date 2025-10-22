@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".service_card");
 
   // Создаём звук
-  const carSound = new Audio("/sounds/car-engine-372477 (1).mp3"); // добавь файл звука в папку /sounds
+  const carSound = new Audio("/sounds/car-engine-372477 (1).mp3"); 
 
   if (animateBtn && cards.length > 0) {
     animateBtn.addEventListener("click", () => {
