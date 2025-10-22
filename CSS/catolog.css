@@ -387,3 +387,77 @@ nav.menu {
 .sidebar button[type="submit"]:hover {
   background-color: #8E1616;
 }
+
+
+
+
+.dynamic_cars {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #2c2020;
+  border-top: 2px solid #8E1616;
+}
+
+.dynamic_cars h2 {
+  color: #D84040;
+  margin-bottom: 30px;
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.car-item {
+  background: #8E1616;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  width: 240px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.car-item:hover {
+  transform: translateY(-8px);
+  background: #D84040;
+}
+
+
+
+
+.animation-section {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.animation-section h2 {
+  color: #D84040;
+  margin-bottom: 20px;
+}
+
+#animateBtn {
+  background: #8E1616;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+#animateBtn:hover {
+  background: #D84040;
+}
+
+.service_card {
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.service_card.jump {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}

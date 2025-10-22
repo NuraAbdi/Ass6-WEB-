@@ -107,3 +107,63 @@ function changeLanguage(lang) {
         textElement.textContent = "Language not supported.";
     }
   }
+
+
+
+
+// ===== Task 2: Arrays + Loops (Dynamic Cars Catalog) =====
+document.addEventListener("DOMContentLoaded", () => {
+  const carList = document.getElementById("carList");
+
+  if (carList) {
+    // массив объектов с машинами
+    const cars = [
+      { brand: "Porsche 911", year: 2024, price: 180000 },
+      { brand: "Lamborghini Huracán", year: 2023, price: 220000 },
+      { brand: "McLaren 720S", year: 2022, price: 250000 },
+      { brand: "Rolls-Royce Ghost", year: 2021, price: 300000 },
+      { brand: "Bugatti Chiron", year: 2019, price: 350000 },
+    ];
+
+    // создаём HTML через цикл
+    cars.forEach(car => {
+      const item = document.createElement("div");
+      item.classList.add("car-item");
+      item.innerHTML = `
+        <h3>${car.brand}</h3>
+        <p>Year: ${car.year}</p>
+        <p>Price: $${car.price.toLocaleString()}</p>
+      `;
+      carList.appendChild(item);
+    });
+  }
+});
+
+
+
+// ===== Task 5: Animation + Sound =====
+document.addEventListener("DOMContentLoaded", () => {
+  const animateBtn = document.getElementById("animateBtn");
+  const cards = document.querySelectorAll(".service_card");
+
+  // Создаём звук
+  const carSound = new Audio("/sounds/car-engine-372477 (1).mp3"); // добавь файл звука в папку /sounds
+
+  if (animateBtn && cards.length > 0) {
+    animateBtn.addEventListener("click", () => {
+      // проигрываем звук при клике
+      carSound.play();
+
+      // анимация карточек по очереди
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add("jump");
+          setTimeout(() => card.classList.remove("jump"), 600);
+        }, index * 200);
+      });
+    });
+  }
+});
+
+
+  
